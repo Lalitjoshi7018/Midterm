@@ -20,7 +20,7 @@ public class AccountTester {
         
         Scanner sc=new Scanner(System.in);
         double bal=sc.nextDouble();
-        
+        if(bal>=50){
         System.out.println("Please enter the unique user name:");
         sc.nextLine();
         String user=sc.nextLine();
@@ -30,5 +30,11 @@ public class AccountTester {
        
         System.out.println("The balance is: "+a.balance);  
         System.out.println("The InterestRate per month is "+a.interestRate);
+        System.out.println("Your final balance after applying interest "+a.getfinalbalance());
+        System.out.println("New Account with Name "+a.getUser()+" is created");
+        }
+        else{
+        System.out.println("To initailize the new account the balance must be greater than 50");     
+        }
     }
 }

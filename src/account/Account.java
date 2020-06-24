@@ -15,6 +15,7 @@ public class Account {
         public double balance;
         public double interestRate=0.3;
         public String user;
+        private double finalbalance;
  
      /**constructor that takes the initial balance
       * @param initialBalance 
@@ -40,5 +41,21 @@ public class Account {
             balance=balance-amount;
 
         } 
+         public double getBalance() 
+        {
+        return balance;
+        }
+         public double getInterestRate() 
+        {
+            return interestRate;
+            
+        }
+         public double getfinalbalance()
+        {
+             return balance = balance+balance*interestRate;
+        }
+         public String getUser() {
+        return user;
+    }
     
 }//class end
